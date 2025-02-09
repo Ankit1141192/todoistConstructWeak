@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity Methods</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="../photo/icon.png">
+  <script src="https://kit.fontawesome.com/d792cef6f0.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <style>
+    #footer{
+      background-color: #f7f9fa;
+    }
+    #footer-icon>h3{
+      font-size: 35px;
+      font-size:700;
+      margin-top: 10px;
+    }
+  </style>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body >
+  <nav id="navbar">
+    <div id="nav-icon">
+        <img src="../photo/icon.png" alt="icon">
+        <h1><a href="./index.html">todoist</a>
+        </h1>
+    </div>
+    <div class="menu-icon" id="menu-icon" >☰</div>
+    <div id="nav-right">
+        <a href="#">Features</a>
+        
+        <div class="dropdown">
+            <a href="../For Teams.html"> Made For  <span><i class="fa-solid fa-angle-down"></i> </span></a>
+            <div class="dropdown-content">
+                <a href="#"><span><i class="fa-regular fa-circle-check"></i> </span>  Task Management</a>
+                <a href="#"><span><i class="fa-regular fa-file-lines"></i> </span>    Project Management</a>
+                <a href="#"><span><i class="fa-regular fa-clock"></i> </span> Time Management</a>
+                <a href="#"><span><i class="fa-solid fa-user-group"></i> </span> Teamwork</a>
+            </div>
+        </div>
+        
+        <div class="dropdown1">
+            <a href="#">Resources <span><i class="fa-solid fa-angle-down"></i></span></a>
+            <div class="dropdown-content">
+                <a href="#"><span><i class="fa-solid fa-puzzle-piece"></i> </span> Integrations</a>
+                <a href="#"><span><i class="fa-solid fa-sitemap"></i></span> Templates</a>
+                <a href="#"><span><i class="fa-solid fa-meteor"></i></span> Getting Started</a>
+                <a href="../CW project/helpcenter.html"><span><i class="fa-regular fa-life-ring"></i></span> Help Center</a>
+                <a href="../CW_project_saurabh_kumar_fs40_3700001/productivity-methods.html"><span><i class="fa-solid fa-question"></i></span> Productivity Methods + Quiz</a>
+                <a href="../CW inspiration/inspiration.html"><span><i class="fa-regular fa-lightbulb"></i></span> Inspiration Hub</a>
+                <a href="../CW_project_saurabh_kumar_fs40_3700001/downloads.html"><span><i class="fa-solid fa-download"></i></span> Downloads</a>
+            </div>
+        </div>
+        
+        <a href="../pricing.html">Pricing</a>
+        <div class="vl"></div>
+        <hr id="navhr">
+        <a href="../login.html">Log in</a>
+        <button id="signupfree"> <a href="../signup.html">Start for free</a></button>
+    </div>
+   
+  </nav>
+  <div class="flex flex-col items-center  min-h-screen bg-gray-50">
+  <div class="text-center max-w-2xl mx-auto mb-16">
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900">
+      Which productivity method is right for you?
+    </h1>
+    <p class="text-gray-600 mt-4 text-lg">
+      Organize your life and get more done with custom recommendations based on your unique strengths, challenges, and
+      goals.
+    </p>
+    <button class="mt-6 bg-red-500 hover:bg-red-600 text-white font-semibold text-lg px-4 py-2 rounded-lg">
+      Take the quiz
+    </button>
+  </div>
+  <div class="container mx-auto flex flex-col md:flex-row gap-6 " x-data="{ activeTab: 'all' }">
+
+    <!-- Sidebar Navigation -->
+    <div class="w-full md:w-1/4 ">
+      <h2 class="font-semibold text-2xl">Categories</h2>
+      <ul class="mt-4 space-y-2">
+        <li @click="activeTab = 'all'"
+          :class="activeTab === 'all' ? 'border-l-2 border-red-500 pl-2 font-semibold' : 'pl-2 cursor-pointer'">
+          <a href="#" class="text-xl text-gray-500 hover:text-black">All methods </a>
+        </li>
+        <li @click="activeTab = 'popular'"
+          :class="activeTab === 'popular' ? 'border-l-2 border-red-500 pl-2 font-semibold' : 'pl-2 cursor-pointer'">
+          <a href="#" class="text-xl text-gray-500 hover:text-black"> Popular</a>
+        </li>
+        <li @click="activeTab = 'focus'"
+          :class="activeTab === 'focus' ? 'border-l-2 border-red-500 pl-2 font-semibold' : 'pl-2 cursor-pointer'"><a
+            href="#" class="text-xl text-gray-500 hover:text-black">Focus</a>
+        </li>
+        <li @click="activeTab = 'procrastination'"
+          :class="activeTab === 'procrastination' ? 'border-l-2 border-red-500 pl-2 font-semibold' : 'pl-2 cursor-pointer'">
+          <a href="#" class="text-xl text-gray-500 hover:text-black">Procrastination</a>
+        </li>
+        <li @click="activeTab = 'goal-tracking'"
+          :class="activeTab === 'goal-tracking' ? 'border-l-2 border-red-500 pl-2 font-semibold' : 'pl-2 cursor-pointer'">
+          <a href="#" class="text-xl text-gray-500 hover:text-black"> Goal tracking</a>
+        </li>
+        <li @click="activeTab = 'task-management'"
+          :class="activeTab === 'task-management' ? 'border-l-2 border-red-500 pl-2 font-semibold' : 'pl-2 cursor-pointer'">
+          <a href="#" class=" text-xl text-gray-500 hover:text-black"> Task management</a>
+        </li>
+        <li @click="activeTab = 'time-management'"
+          :class="activeTab === 'time-management' ? 'border-l-2 border-red-500 pl-2 font-semibold' : 'pl-2 cursor-pointer'">
+          <a href="#" class="text-xl text-gray-500 hover:text-black"> Time management</a>
+        </li>
+        <li @click="activeTab = 'teamwork'"
+          :class="activeTab === 'teamwork' ? 'border-l-2 border-red-500 pl-2 font-semibold' : 'pl-2 cursor-pointer'">
+          <a href="#" class=" text-xl text-gray-500 hover:text-black"> Teamwork</a>
+        </li>
+        <li @click="activeTab = 'prioritization'"
+          :class="activeTab === 'prioritization' ? 'border-l-2 border-red-500 pl-2 font-semibold' : 'pl-2 cursor-pointer'">
+          <a href="#" class=" text-xl text-gray-500 hover:text-black"> Prioritization</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="w-full md:w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+
+      <!-- Card 1: GTD -->
+      <div x-show="activeTab === 'all' || activeTab === 'task-management' || activeTab === 'popular'"
+        class="bg-white shadow rounded-lg ">
+        <img src="./images/gtd.png" alt="Getting Things Done" class="rounded-t-lg">
+        <div class="m-3">
+          <h3 class="mt-3 font-semibold">Getting Things Done (GTD)</h3>
+        </div>
+        <p class="text-sm text-gray-600 mt-2">Systematize the clutter in your brain and get things done.</p>
+        <div class="mt-2 flex flex-wrap gap-2 m-3">
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Popular</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Task management</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Kanban -->
+      <div
+        x-show="activeTab === 'all' || activeTab === 'task-management' || activeTab === 'teamwork' || activeTab === 'prioritization' || activeTab === 'popular'"
+        class="bg-white  shadow rounded-lg">
+        <img src="./images/kanban.png" alt="Kanban" class="rounded-t-lg">
+        <div class="m-3">
+          <h3 class="mt-3 font-semibold">Kanban</h3>
+          <p class="text-sm text-gray-600">Move your project through a visual pipeline from start to finish.</p>
+        </div>
+        <div class="mt-2 flex flex-wrap gap-2 m-3">
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Popular</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Task management</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Teamwork</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Prioritization</span>
+        </div>
+      </div>
+
+      <!-- Card 3: Time Blocking -->
+      <div
+        x-show="activeTab === 'all' || activeTab === 'time-management' || activeTab === 'focus' || activeTab==='task-management'  || activeTab === 'popular'"
+        class="bg-white shadow rounded-lg">
+        <img src="./images/timeblo.png" alt="Time Blocking" class="rounded-t-lg">
+        <div class="m-3">
+          <h3 class="mt-3 font-semibold">Time Blocking</h3>
+          <p class="text-sm text-gray-600 mt-2">Control your schedule so it doesn’t control you.</p>
+        </div>
+        <div class="mt-2 flex flex-wrap gap-2 m-3">
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Popular</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Focus</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Time management</span>
+        </div>
+      </div>
+
+      <!-- Eat the Frog -->
+      <div
+        x-show="activeTab === 'all' || activeTab === 'time-management' || activeTab === 'focus' || activeTab === 'popular'  || activeTab === 'procrastination'"
+        class="bg-white shadow rounded-lg">
+        <img src="./images/timeblo.png" alt="Eat the Frog" class="rounded-t-lg">
+        <div class="m-3">
+          <h3 class="mt-3 font-semibold">Eat the Frog
+          </h3>
+          <p class="text-sm text-gray-600 mt-2">If it's your job to eat a frog, it's best to do it first thing in the
+            morning</p>
+        </div>
+        <div class="mt-2 flex flex-wrap gap-2 m-3">
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Popular</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Focus</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Time management</span>
+        </div>
+      </div>
+
+      <!-- The Pomodoro Technique -->
+      <div
+        x-show="activeTab === 'all' || activeTab === 'time-management' || activeTab === 'focus'  || activeTab === 'popular'  || activeTab === 'procrastination'"
+        class="bg-white      shadow rounded-lg">
+        <img src="./images/timeblo.png" alt="The Pomodoro Technique" class="rounded-t-lg">
+        <div class="m-3">
+          <h3 class="mt-3 font-semibold">The Pomodoro Technique</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            Beat procrastination and improve your focus one pomodoro at a time</p>
+        </div>
+        <div class="mt-2 flex flex-wrap gap-2 m-3">
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Popular</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Focus</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Time management</span>
+        </div>
+      </div>
+
+      <!-- The Eisenhower Matrix -->
+      <div x-show="activeTab === 'all' || activeTab === 'time-management'|| activeTab === 'popular'"
+        class="bg-white      shadow rounded-lg">
+        <img src="./images/timeblo.png" alt="The Eisenhower Matrix" class="rounded-t-lg">
+        <div class="m-3">
+          <h3 class="mt-3 font-semibold">The Eisenhower Matrix</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            Avoid the "Urgency Trap" with Dwight D. Eisenhower's famous prioritization framework</p>
+        </div>
+        <div class="mt-2 flex flex-wrap gap-2 m-3">
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Popular</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Focus</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Time management</span>
+        </div>
+      </div>
+
+      <!-- Systemist -->
+      <div
+        x-show="activeTab === 'all' || activeTab === 'time-management' || activeTab === 'focus' || activeTab === 'prioritization'"
+        class="bg-white      shadow rounded-lg">
+        <img src="./images/timeblo.png" alt="Systemist" class="rounded-t-lg">
+        <div class="m-3">
+          <h3 class="mt-3 font-semibold">Systemist</h3>
+          <p class="text-sm text-gray-600 mt-2">Follow Todoist's founder's personal productivity system.</p>
+        </div>
+        <div class="mt-2 flex flex-wrap gap-2 m-3">
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Popular</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Focus</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Time management</span>
+        </div>
+      </div>
+
+      <!-- The Medium Method -->
+      <div
+        x-show="activeTab === 'all' || activeTab === 'time-management' || activeTab === 'focus' || activeTab === 'prioritization'"
+        class="bg-white      shadow rounded-lg">
+        <img src="./images/timeblo.png" alt="The Medium Method" class="rounded-t-lg">
+        <div class="m-3">
+          <h3 class="mt-3 font-semibold">The Medium Method</h3>
+          <p class="text-sm text-gray-600 mt-2">Want to be more productive? Don't go (completely) paperless</p>
+        </div>
+        <div class="mt-2 flex flex-wrap gap-2 m-3">
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Popular</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Focus</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Time management</span>
+        </div>
+      </div>
+
+      <!-- OKRs -->
+      <div
+        x-show="activeTab === 'all' || activeTab === 'time-management' || activeTab === 'focus'  || activeTab === 'goal-tracking'  || activeTab === 'teamwork'  || activeTab === 'prioritization'"
+        class="bg-white      shadow rounded-lg">
+        <img src="./images/timeblo.png" alt="Objectives & Key Results" class="rounded-t-lg">
+        <div class="m-3">
+          <h3 class="mt-3 font-semibold">Objectives & Key Results (OKRs)</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            Set rigorous goals that align big-picture priorities with day-to-day actions</p>
+        </div>
+        <div class="mt-2 flex flex-wrap gap-2 m-3">
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Popular</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Focus</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Time management</span>
+        </div>
+      </div>
+
+      <!-- The Weekly Review -->
+      <div
+        x-show="activeTab === 'all' || activeTab === 'time-management' || activeTab === 'focus'  || activeTab === 'goal-tracking' || activeTab === 'prioritization'"
+        class="bg-white      shadow rounded-lg">
+        <img src="./images/timeblo.png" alt="The Weekly Review" class="rounded-t-lg">
+        <div class="m-3">
+          <h3 class="mt-3 font-semibold">The Weekly Review</h3>
+          <p class="text-sm text-gray-600 mt-2">
+
+            10x your productivity with just one hour a week</p>
+        </div>
+        <div class="mt-2 flex flex-wrap gap-2 m-3">
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Popular</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Focus</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Time management</span>
+        </div>
+      </div>
+
+      <!-- The Commitment Inventory -->
+      <div
+        x-show="activeTab === 'all' || activeTab === 'time-management' || activeTab === 'focus' || activeTab === 'prioritization'"
+        class="bg-white shadow rounded-lg">
+        <img src="./images/timeblo.png" alt="The Commitment Inventory" class="rounded-t-lg">
+        <div class="m-3">
+          <h3 class="mt-3 font-semibold">The Commitment Inventory</h3>
+          <p class="text-sm text-gray-600 mt-2">
+
+            Make sure every area of your life gets the time and energy it deserves</p>
+        </div>
+        <div class="mt-2 flex flex-wrap gap-2 m-3">
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Popular</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Focus</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Time management</span>
+        </div>
+      </div>
+
+      <!-- The Eisenhower Matrix -->
+      <div x-show="activeTab === 'all' || activeTab === 'time-management' || activeTab === 'focus'"
+        class="bg-white shadow rounded-lg">
+        <img src="./images/timeblo.png" alt="The Eisenhower Matrix" class="rounded-t-lg">
+        <div class="m-3">
+          <h3 class="mt-3 font-semibold">The Eisenhower Matrix</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            Avoid the "Urgency Trap" with Dwight D. Eisenhower's famous prioritization framework</p>
+        </div>
+        <div class="mt-2 flex flex-wrap gap-2 m-3">
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Popular</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Focus</span>
+          <span class="text-xs bg-gray-200 px-2 py-1 rounded">Time management</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Subscribe setion -->
+
+  <div class="max-w-lg mx-auto text-center p-8 border-t border-gray-200 flex flex-col items-center">
+    <h2 class="text-2xl font-semibold text-gray-900">Want more in-depth productivity advice?</h2>
+    <p class="text-gray-600 mt-2">
+      Productivity inspiration and tactical advice that’s actually useful.
+      Join 160K+ readers who start their month with the Todoist newsletter.
+    </p>
+    <div class="mt-4 flex items-center justify-center">
+      <input type="email" placeholder="Your email address"
+        class="border rounded-l-md px-4 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-gray-400">
+      <button class="bg-red-500 text-white font-semibold px-4 py-2 rounded-r-md hover:bg-red-600">
+        Subscribe
+      </button>
+    </div>
+    <p class="text-xs text-gray-500 mt-2">
+      By subscribing, you accept our <a href="#" class="text-blue-500">privacy policy</a>.
+      <br> TL;DR, we respect you and your email.
+    </p>
+  </div>
+
+  <!-- Other Section -->
+  <div class="container mx-auto px-4 py-8">
+    <div class="flex flex-col md:flex-row items-center">
+
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <img src="./images/todo.png" alt="Todoist Illustration" class="max-w-full h-auto">
+      </div>
+
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-4xl font-bold mb-4">You don't <span class="font-normal">need</span><br> a to-do list app.</h1>
+        <p class="text-lg mb-6">But the right one helps.</p>
+        <p class="text-gray-600 mb-8">Todoist is simple to use yet flexible<br> enough to fit whichever workflow you<br>
+          settle on.</p>
+        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded">
+          Get started for free
+        </button>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</div>
+<footer id="footer">
+  <hr>
+  <div id="footer1">
+      <div id="foot1a">
+          <div id="footer-icon">
+              <img src="../photo/Screenshot 2025-02-05 004353.png" alt="icon">
+              <h3>todoist</h3>
+          </div>
+          <p>Join millions of people who organize <br> work and life with Todoist.</p>
+      </div>
+      <div id="foot-right">
+          <div id="footer1a">
+              <h3>Features</h3>
+              <a href="">How It Works</a>
+              <a href="../For Teams.html">For Teams</a>
+              <a href="../For Teams.html">Pricing</a>
+              <a href="">Templates</a>
+          </div>
+          <div id="footer1a">
+              <h3>Resources</h3>
+              <a href="../CW_project_saurabh_kumar_fs40_3700001/downloads.html">Download Apps</a>
+              <a href="../CW project/helpcenter.html">Help Center</a>
+              <a href="../CW_project_saurabh_kumar_fs40_3700001/productivity-methods.html">Productivity Methods</a>
+              <a href="">Integrations</a>
+              <a href="">Channel Partners</a>
+              <a href="">Developer API</a>
+              <a href="">Status</a>
+          </div>
+          <div id="footer1a">
+              <h3>Company</h3>
+              <a href="">About Us</a>
+              <a href="">Careers</a>
+              <a href="">Inspiration Hub</a>
+              <a href="">Press</a>
+              <a href="">Twits</a>
+          </div>
+          <div id="footer1a">
+              <a href="https://x.com/todoist"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.youtube.com/channel/UCQ_61yRKscCnkIJBPoR15EA"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.facebook.com/Todoist/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/todoistofficial"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+      </div>
+  </div>
+ <div id="footer2">
+  <div id="footer2a">
+      <a href="https://www.todoist.com/security">Security |</a>
+      <a href="https://doist.com/privacy">Privacy |</a>
+      <a href="https://doist.com/terms-of-service"> Terms</a>
+      <a>© Doist Inc.</a>
+  </div>
+  <div class="language-dropdown">
+      <span class="globe-icon"><i class="fa-solid fa-globe"></i></span>
+      <select>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+      </select>
+  </div>
+ </div>
+</footer>
+  <script src="./productivity-methods.js"></script>
+</body>
+
+</html>

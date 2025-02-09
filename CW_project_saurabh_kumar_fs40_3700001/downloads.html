@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todoist for Windows</title>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" href="../photo/icon.png">
+    <script src="https://kit.fontawesome.com/d792cef6f0.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+    #footer{
+      background-color: #fffefc;
+    }
+    #footer-icon>h3{
+      font-size: 35px;
+      font-size:700;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<nav id="navbar">
+  <div id="nav-icon">
+      <img src="../photo/icon.png" alt="icon">
+      <h1><a href="./index.html">todoist</a>
+      </h1>
+  </div>
+  <div class="menu-icon" id="menu-icon" >☰</div>
+  <div id="nav-right">
+      <a href="#">Features</a>
+      
+      <div class="dropdown">
+          <a href="../For Teams.html"> Made For  <span><i class="fa-solid fa-angle-down"></i> </span></a>
+          <div class="dropdown-content">
+              <a href="#"><span><i class="fa-regular fa-circle-check"></i> </span>  Task Management</a>
+              <a href="#"><span><i class="fa-regular fa-file-lines"></i> </span>    Project Management</a>
+              <a href="#"><span><i class="fa-regular fa-clock"></i> </span> Time Management</a>
+              <a href="#"><span><i class="fa-solid fa-user-group"></i> </span> Teamwork</a>
+          </div>
+      </div>
+      
+      <div class="dropdown1">
+          <a href="#">Resources <span><i class="fa-solid fa-angle-down"></i></span></a>
+          <div class="dropdown-content">
+              <a href="../integrations page/integrations.html"><span><i class="fa-solid fa-puzzle-piece"></i> </span> Integrations</a>
+              <a href="../templates page/Templates.html"><span><i class="fa-solid fa-sitemap"></i></span> Templates</a>
+              <a href="#"><span><i class="fa-solid fa-meteor"></i></span> Getting Started</a>
+              <a href="../CW project/helpcenter.html"><span><i class="fa-regular fa-life-ring"></i></span> Help Center</a>
+              <a href="../CW_project_saurabh_kumar_fs40_3700001/productivity-methods.html"><span><i class="fa-solid fa-question"></i></span> Productivity Methods + Quiz</a>
+              <a href="../CW inspiration/inspiration.html"><span><i class="fa-regular fa-lightbulb"></i></span> Inspiration Hub</a>
+              <a href="../CW_project_saurabh_kumar_fs40_3700001/downloads.html"><span><i class="fa-solid fa-download"></i></span> Downloads</a>
+          </div>
+      </div>
+      
+      <a href="../pricing.html">Pricing</a>
+      <div class="vl"></div>
+      <hr id="navhr">
+      <a href="../login.html">Log in</a>
+      <button id="signupfree"> <a href="../signup.html">Start for free</a></button>
+  </div>
+ 
+</nav>
+<body class="bg-white text-gray-800">
+  <div class="flex flex-col items-center justify-center px-4">
+    <div class="relative mb-6">
+      <img src="images/front.png" alt="Todoist Image" class="rounded-lg" />
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black-50 opacity-20 rounded-lg"></div>
+    </div>
+
+    <h1 class="text-4xl font-bold   text-center mb-4">Todoist for Windows</h1>
+
+    <a href="./downloads.html"
+      class="mt-4 bg-red-500 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-red-600 transition shadow-md">
+      Download for Windows
+    </a>
+
+    <div class="mt-8 text-center">
+      <div class="inline-block p-4 rounded-lg">
+        <p class="text-3xl font-semibold">
+          Award-winning apps for every device
+        </p>
+        <p class="text-gray-600 text-lg">
+          Download Todoist for <a href="#" class="text-blue-500">Linux</a>,
+          Mac Windows iPhone iPad Android
+        </p>
+        <p class="text-gray-600 text-lg">
+          Apple Watch and WearOS Add Todoist to your
+          <a href="#" class="text-blue-500">browser</a> and
+          <a href="#" class="text-blue-500">email</a>, too.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center justify-center  py-16 px-4">
+
+    <!-- Tab Navigation -->
+    <div x-data="{ activeTab: 'desktop' }" class="w-full max-w-4xl">
+      <div class="flex space-x-2 border-b pb-2 justify-center">
+
+        <button @click="activeTab = 'desktop'" :class="activeTab === 'desktop' ? 'bg-yellow-50    text-lg' : ''"
+          class="px-4 py-2 rounded-lg text-gray-700 flex items-center font-bold bg-gray-50 p-4">
+          <span class="px-2"> 💻 </span> Desktop
+        </button>
+
+        <button @click="activeTab = 'android'" :class="activeTab === 'android' ? 'bg-yellow-50   ' : ''"
+          class="px-4 py-2 rounded-lg text-gray-700 flex items-center font-bold bg-gray-50">
+          <span class="px-2"> 📱</span> Android
+        </button>
+
+        <button @click="activeTab = 'ios'" :class="activeTab === 'ios' ? 'bg-yellow-50   ' : ''"
+          class="px-4 py-2 rounded-lg text-gray-700 flex items-center font-bold bg-gray-50 ">
+          <span class="px-2">🍏 </span> iOS
+        </button>
+
+        <button @click="activeTab = 'wearables'" :class="activeTab === 'wearables' ? 'bg-yellow-50   ' : ''"
+          class="px-4 py-2 rounded-lg text-gray-700 flex items-center font-bold bg-gray-50">
+          <span class="px-2"> ⌚</span> Wearables
+        </button>
+
+        <button @click="activeTab = 'browser'" :class="activeTab === 'browser' ? 'bg-yellow-50   ' : ''"
+          class="px-4 py-2 rounded-lg text-gray-700 flex items-center font-bold bg-gray-50">
+          <span class="px-2"> 🌐 </span> Browser
+        </button>
+
+        <button @click="activeTab = 'email'" :class="activeTab === 'email' ? 'bg-yellow-50   ' : ''"
+          class="px-4 py-2 rounded-lg text-gray-700 flex items-center font-bold bg-gray-50">
+          <span class="px-2"> 📧 </span> Email
+        </button>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="mt-6">
+        <div x-show="activeTab === 'desktop'" class="">
+          <img src="./images/Desktop.png" alt="Desktop Image" class="rounded-lg shadow-md mx-auto">
+
+        </div>
+
+        <div x-show="activeTab === 'android'" class="text-center ">
+          <img src="images/android.png" alt="Android Image" class="rounded-lg shadow-md mx-auto ">
+        </div>
+
+        <div x-show="activeTab === 'ios'" class="text-center">
+          <img src="images/IOS.png" alt="iOS Image" class="rounded-lg shadow-md mx-auto">
+
+        </div>
+
+        <div x-show="activeTab === 'wearables'" class="text-center">
+          <img src="images/wearables.png" alt="Wearables Image" class="rounded-lg shadow-md mx-auto">
+
+        </div>
+
+        <div x-show="activeTab === 'browser'" class="text-center">
+          <img src="images/Browser Extension.png" alt="Browser Extensions Image" class="rounded-lg shadow-md mx-auto">
+          <p class="mt-4 text-lg font-semibold">Enhance Your Workflow with Browser Extensions</p>
+        </div>
+
+        <div x-show="activeTab === 'email'" class="text-center">
+          <img src="images/emailAddOn.png" alt="Email Add-ons Image" class="rounded-lg shadow-md mx-auto">
+          <p class="mt-4 text-lg font-semibold">Manage Tasks from Email</p>
+        </div>
+        <!-- 
+        <div x-show="activeTab === 'text'" class="text-center">
+          <img src="https://via.placeholder.com/600x250" alt="Text Integration Image"
+            class="rounded-lg shadow-md mx-auto">
+          <p class="mt-4 text-lg font-semibold">Get Reminders via Text Messages</p>
+        </div> -->
+      </div>
+    </div>
+
+  </div>
+  <footer id="footer">
+    <hr>
+    <div id="footer1">
+        <div id="foot1a">
+            <div id="footer-icon">
+                <img src="../photo/Screenshot 2025-02-05 004353.png" alt="icon">
+                <h3>todoist</h3>
+            </div>
+            <p>Join millions of people who organize <br> work and life with Todoist.</p>
+        </div>
+        <div id="foot-right">
+            <div id="footer1a">
+                <h3>Features</h3>
+                <a href="https://www.todoist.com/features">How It Works</a>
+                <a href="../For Teams.html">For Teams</a>
+                <a href="../pricing.html">Pricing</a>
+                <a href="">Templates</a>
+            </div>
+            <div id="footer1a">
+                <h3>Resources</h3>
+                <a href="./downloads.html">Download Apps</a>
+                <a href="../CW project/helpcenter.html">Help Center</a>
+                <a href="./productivity-methods.html">Productivity Methods</a>
+                <a href="">Integrations</a>
+                <a href="">Channel Partners</a>
+                <a href="">Developer API</a>
+                <a href="">Status</a>
+            </div>
+            <div id="footer1a">
+                <h3>Company</h3>
+                <a href="">About Us</a>
+                <a href="">Careers</a>
+                <a href="">Inspiration Hub</a>
+                <a href="">Press</a>
+                <a href="">Twits</a>
+            </div>
+            <div id="footer1a">
+                <a href="https://x.com/todoist"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCQ_61yRKscCnkIJBPoR15EA"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.facebook.com/Todoist/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/todoistofficial"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+   <div id="footer2">
+    <div id="footer2a">
+        <a href="https://www.todoist.com/security">Security |</a>
+        <a href="https://doist.com/privacy">Privacy |</a>
+        <a href="https://doist.com/terms-of-service"> Terms</a>
+        <a>© Doist Inc.</a>
+    </div>
+    <div class="language-dropdown">
+        <span class="globe-icon"><i class="fa-solid fa-globe"></i></span>
+        <select>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+        </select>
+    </div>
+   </div>
+</footer>
+</body>
+
+</html>

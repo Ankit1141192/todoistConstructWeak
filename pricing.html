@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing Plans</title>
+  <!-- Import Alpine.js for interactivity -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <!-- Import Tailwind CSS for styling -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="./photo/icon.png">
+  <script src="https://kit.fontawesome.com/d792cef6f0.js" crossorigin="anonymous"></script>
+  <style>
+    tr:hover td {
+      background-color: #f5f4f4;
+    }
+    #navbar{
+      margin-top: -45px;
+    }
+    #footer{
+      margin-top: 10%;
+      margin-bottom: -20%;
+    }
+    p>a{
+      color: blueviolet;
+    }
+    #footer-icon> h3{
+      font-size: 35px;
+      font-size:700;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body class="bg-whit py-10">
+  <nav id="navbar">
+    <div id="nav-icon">
+        <img src="photo/icon.png" alt="icon">
+        <h1><a href="./index.html">todoist</a>
+        </h1>
+    </div>
+    <div class="menu-icon" id="menu-icon" >☰</div>
+    <div id="nav-right">
+        <a href="#">Features</a>
+        
+        <div class="dropdown">
+            <a href="./For Teams.html">For Teams</a>
+            <!-- <div class="dropdown-content">
+                <a href="#"><span><i class="fa-regular fa-circle-check"></i></span>  Task Management</a>
+                <a href="#"><span><i class="fa-regular fa-file-lines"></i></span>    Project Management</a>
+                <a href="#"><span><i class="fa-regular fa-clock"></i> </span> Time Management</a>
+                <a href="#"><span><i class="fa-solid fa-user-group"></i> </span> Teamwork</a>
+            </div> -->
+        </div>
+        
+        <div class="dropdown1">
+            <a href="#">Resources <span><i class="fa-solid fa-angle-down"></i></span></a>
+            <div class="dropdown-content">
+                <a href="#"><span><i class="fa-solid fa-puzzle-piece"></i></span> Integrations</a>
+                <a href="#"><span><i class="fa-solid fa-sitemap"></i></span> Templates</a>
+                <a href="#"><span><i class="fa-solid fa-meteor"></i></span> Getting Started</a>
+                <a href="./CW project/helpcenter.html"><span><i class="fa-regular fa-life-ring"></i></span> Help Center</a>
+                <a href="./CW_project_saurabh_kumar_fs40_3700001/productivity-methods.html"><span><i class="fa-solid fa-question"></i></span> Productivity Methods + Quiz</a>
+                <a href="./CW inspiration/inspiration.html"><span><i class="fa-regular fa-lightbulb"></i></span> Inspiration Hub</a>
+                <a href="./CW_project_saurabh_kumar_fs40_3700001/downloads.html"><span><i class="fa-solid fa-download"></i></span> Downloads</a>
+            </div>
+        </div>
+        
+        <a href="./pricing.html">Pricing</a>
+        <div class="vl"></div>
+        <hr id="navhr">
+        <a href="./login.html">Log in</a>
+        <button id="signupfree"> <a href="./signup.html">Start for free</a></button>
+    </div>
+   
+</nav>
+   
+
+  <!-- Pricing Section -->
+  <section class="max-w-6xl mx-auto p-8 rounded-2xl" x-data="{ plan: 'yearly' }">
+    <div class="mt-8 bg-white rounded-lg  overflow-x-auto ">
+
+      <div class="mb-9 text-center px-4 md:px-0">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Choose your path<br class="hidden md:block">to
+          productivity</h1>
+        <p class="text-base md:text-xl text-gray-700 mb-8 leading-relaxed">
+          Use Todoist for free forever or upgrade to unlock our most<br class="hidden md:block">
+          powerful features for work and collaboration.
+        </p>
+        <div class="mt-8">
+          <span class="text-sm text-gray-600 font-bold">374K+ ★★★★★ reviews</span>
+        </div>
+      </div>
+
+    </div>
+    <!-- Save 20% Label -->
+    <div class="text-sm text-gray-600 mb-4">
+      <span class="font-semibold">Save 20%</span>
+    </div>
+
+    <!-- Billing Toggle -->
+    <div class="flex justify-self-start items-center mb-6">
+      <button @click="plan = 'yearly'"
+        :class="{ 'bg-gray-00 text-black ': plan === 'yearly', 'bg-white text-gray-800': plan !== 'yearly' }"
+        class="px-4 py-2 rounded-l-lg border border-gray-300">
+        Billed Yearly
+      </button>
+      <button @click="plan = 'monthly'"
+        :class="{ 'bg-gray-100 text-black': plan === 'monthly', 'bg-white text-gray-800': plan !== 'monthly' }"
+        class="px-4 py-2 rounded-r-lg border border-gray-300">
+        Billed Monthly
+      </button>
+    </div>
+
+    <!-- Pricing Plans -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="border p-6 rounded-lg shadow-sm">
+        <h2 class="text-xl font-bold mb-2">Beginner</h2>
+        <p class="text-gray-600 mb-4">Start organizing your life for free</p>
+        <div class="text-3xl font-extrabold mb-4">₹0</div>
+        <ul class="text-gray-700 space-y-2">
+          <li>✓ 5 personal projects</li>
+          <li>✓ Smart quick add</li>
+          <li>✓ Task reminders</li>
+          <li>✓ Flexible list & board layouts</li>
+          <li>✓ 3 filter views</li>
+          <li>✓ 1 week activity history</li>
+          <li>✓ Integrate email, calendar, and more</li>
+        </ul>
+      </div>
+
+      <div class="border p-6 rounded-lg shadow-sm">
+        <h2 class="text-xl font-bold mb-2">Pro</h2>
+        <p class="text-gray-600 mb-4">Organize your work and life</p>
+        <div class="flex items-center mb-4">
+          <div class="text-3xl font-extrabold mr-2" x-text="plan === 'monthly' ? '₹220' : '₹176'"></div>
+          <div class="text-sm text-gray-500">
+            per user/month<br>
+            ₹2100 billed yearly
+          </div>
+        </div>
+        <ul class="text-gray-700 space-y-2">
+          <li>✓ 300 personal projects</li>
+          <li>✓ Calendar layout</li>
+          <li>✓ Task duration</li>
+          <li>✓ Custom task reminders</li>
+          <li>✓ 150 filter views</li>
+          <li>✓ Unlimited activity history</li>
+          <li>✓ Al Assistant</li>
+          <li>✓ Deadlines</li>
+        </ul>
+      </div>
+
+      <div class="border p-6 rounded-lg shadow-sm">
+        <h2 class="text-xl font-bold mb-2">Business</h2>
+        <p class="text-gray-600 mb-4">Manage your teamwork, too</p>
+        <div class="flex items-center mb-4">
+          <div class="text-3xl font-extrabold mr-2" x-text="plan === 'monthly' ? '₹692' : '₹554'"></div>
+          <div class="text-sm text-gray-500">
+            per user/month<br>
+            ₹6234 billed yearly
+          </div>
+        </div>
+        <ul class="text-gray-700 space-y-2">
+          <li>✓ A shared team workspace</li>
+          <li>✓ Up to 500 team projects</li>
+          <li>✓ Calendar layout for team projects</li>
+          <li>✓ Granular team activity logs</li>
+          <li>✓ Shared templates</li>
+          <li>✓ 1000 team members & guests</li>
+          <li>✓ 1000 project folders</li>
+          <li>✓ Team roles & permissions</li>
+          <li>✓ Centralized team billing</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- Compare plans -->
+    <div class="mt-8 bg-white rounded-lg shadow-md overflow-x-auto">
+
+      <div class="flex justify-between items-center border-b border-gray-200 mb-4">
+        <div class="py-4 pl-4">
+          <h2 class="text-3xl font-bold">Compare plans</h2>
+        </div>
+        <div class="text-right">
+          <a href="#" class="text-blue-500 hover:underline pr-4">Read the plans FAQ</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="rounded-lg shadow-md p-6 text-center md:text-left">
+          <h3 class="text-2xl font-semibold mb-2">Beginner</h3>
+          <div class="text-4xl font-bold mb-4">₹0</div>
+        </div>
+
+        <div class="rounded-lg shadow-md p-6 text-center md:text-left">
+          <h3 class="text-2xl font-semibold mb-2">Pro</h3>
+          <div class="flex flex-col md:flex-row items-center md:items-start">
+            <div class="text-4xl font-bold mr-2 md:mr-0" x-text="plan === 'monthly' ? '₹220' : '₹176'">₹175</div>
+            <div class="text-gray-700 text-sm md:text-base">per user/month<br>₹2100 billed yearly</div>
+          </div>
+        </div>
+
+        <div class="rounded-lg shadow-md p-6 text-center md:text-left">
+          <h3 class="text-2xl font-semibold mb-2">Business</h3>
+          <div class="flex flex-col md:flex-row items-center md:items-start">
+            <div class="text-4xl font-bold mr-2 md:mr-0" x-text="plan === 'yearly' ? '₹554' : '₹692'">₹519.50</div>
+            <div class="text-gray-700 text-sm md:text-base">per user/month<br>₹6234 billed yearly</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Essentials -->
+    <div class="mt-8 bg-white rounded-lg shadow-md overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200 table-fixed md:table-auto">
+        <thead class="bg-white">
+          <tr>
+            <th scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 md:w-auto">
+              Essentials</th>
+            <th scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 md:w-auto text-center">
+              Beginner</th>
+            <th scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 md:w-auto text-center">
+              Pro
+            </th>
+            <th scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking w-1/4 md:w-auto text-center">
+              Business</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">Personal projects</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">5</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">300</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center break-words">300 for each member</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900">Due dates & times</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓
+            </td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900">Priority levels</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓
+            </td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900">Sub-tasks</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓
+            </td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900">Task reminders</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓
+            </td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">File uploads</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">5 MB</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">100 MB
+            </td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">100 MB</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+    <!--Task views -->
+    <div class="mt-8 bg-white rounded-lg shadow-md overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200 table-fixed md:table-auto">
+        <thead class="bg-white">
+          <tr>
+            <th scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 md:w-auto">
+              Task views</th>
+            <th scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 md:w-auto text-center">
+              Beginner</th>
+            <th scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 md:w-auto text-center">
+              Pro
+            </th>
+            <th scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 md:w-auto text-center">
+              Business</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">List layout</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">Board layout</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 break-words">In label, filter, and personal project views</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center break-words">In team projects, too</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">Calendar layout</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center"></td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">Custom filters</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">3</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">150</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center break-words">150 for each member</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Advanced  -->
+    <div class="mt-8 bg-white rounded-lg shadow-md overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200 table-fixed md:table-auto">
+        <thead class="bg-gray-50">
+          <tr>
+            <th scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 md:w-auto">
+              Advanced</th>
+            <th scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 md:w-auto text-center">
+              Beginner</th>
+            <th scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 md:w-auto text-center">
+              Pro
+            </th>
+            <th scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 md:w-auto text-center">
+              Business</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">Recurring due dates</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">Lables</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">Tasks Description</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">90+ integrations</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">Custom Reminders</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center"></td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">Task duration</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center"></td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">AI Assistant</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center"></td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">Auto backups</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center"></td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">✓</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">Activity history</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">1 week</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">Unlimited</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">Unlimited</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">Themes</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">4</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">8</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center">8</td>
+          </tr>
+          <tr class="divide-y divide-gray-200 border-b border-gray-200">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900 break-words">SOC2 Certification</td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center"></td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center"></td>
+            <td class="px-6 py-4 text-sm text-gray-500 text-center"><a href="" class="break-all">Share your compliance
+                requirements</a> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <footer id="footer">
+    <div id="foot">
+        <h1>Join 30 million+ people who rely  <br>on Todoist to manage work and life</h1>
+        <p>Plus tens of thousands of teams from companies of all sizes.</p>
+        <a href="./signup.html"><button class="btn">Start for free</button></a>
+        <p><a href="https://www.todoist.com/help/articles/teams-faq-lQhBHo0y6"><span><i class="fa-solid fa-book-open"></i> </span>Read the plans FAQ</a></p>
+    
+    </div>
+  
+    <hr>
+    <div id="footer1">
+        <div id="foot1a">
+            <div id="footer-icon">
+                <img src="photo/Screenshot 2025-02-05 004353.png" alt="icon">
+                <h3>todoist</h3>
+            </div>
+            <p>Join millions of people who organize <br> work and life with Todoist.</p>
+        </div>
+        <div id="foot-right">
+            <div id="footer1a">
+                <h3>Features</h3>
+                <a href="">How It Works</a>
+                <a href="./For Teams.html">For Teams</a>
+                <a href="./pricing.html">Pricing</a>
+                <a href="">Templates</a>
+            </div>
+            <div id="footer1a">
+                <h3>Resources</h3>
+                <a href="./CW_project_saurabh_kumar_fs40_3700001/downloads.html">Download Apps</a>
+                <a href="./CW project/helpcenter.html">Help Center</a>
+                <a href="./CW_project_saurabh_kumar_fs40_3700001/productivity-methods.html">Productivity Methods</a>
+                <a href="">Integrations</a>
+                <a href="">Channel Partners</a>
+                <a href="">Developer API</a>
+                <a href="">Status</a>
+            </div>
+            <div id="footer1a">
+                <h3>Company</h3>
+                <a href="">About Us</a>
+                <a href="">Careers</a>
+                <a href="./CW inspiration/inspiration.html">Inspiration Hub</a>
+                <a href="">Press</a>
+                <a href="">Twits</a>
+            </div>
+            <div id="footer1a">
+              <a href="https://x.com/todoist"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.youtube.com/channel/UCQ_61yRKscCnkIJBPoR15EA"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.facebook.com/Todoist/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/todoistofficial"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+   <div id="footer2">
+    <div id="footer2a">
+      <a href="https://www.todoist.com/security">Security |</a>
+      <a href="https://doist.com/privacy">Privacy |</a>
+      <a href="https://doist.com/terms-of-service"> Terms</a>
+        <a>© Doist Inc.</a>
+    </div>
+    <div class="language-dropdown">
+        <span class="globe-icon"><i class="fa-solid fa-globe"></i></span>
+        <select>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+        </select>
+    </div>
+   </div>
+</footer>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>

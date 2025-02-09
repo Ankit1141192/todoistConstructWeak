@@ -12,39 +12,43 @@
     <nav id="navbar">
         <div id="nav-icon">
             <img src="photo/icon.png" alt="icon">
-            <h1>todoist</h1>
+            <h1><a href="./index.html">todoist</a>
+            </h1>
         </div>
+        <div class="menu-icon" id="menu-icon" >☰</div>
         <div id="nav-right">
             <a href="#">Features</a>
             
             <div class="dropdown">
-                <a href="#">Made For <span><i class="fa-solid fa-angle-down"></i></span></a>
-                <div class="dropdown-content">
+                <a href="./For Teams.html">For Teams</a>
+                <!-- <div class="dropdown-content">
                     <a href="#"><span><i class="fa-regular fa-circle-check"></i></span>  Task Management</a>
                     <a href="#"><span><i class="fa-regular fa-file-lines"></i></span>    Project Management</a>
                     <a href="#"><span><i class="fa-regular fa-clock"></i> </span> Time Management</a>
                     <a href="#"><span><i class="fa-solid fa-user-group"></i> </span> Teamwork</a>
-                </div>
+                </div> -->
             </div>
             
             <div class="dropdown1">
                 <a href="#">Resources <span><i class="fa-solid fa-angle-down"></i></span></a>
                 <div class="dropdown-content">
-                    <a href="#"><span><i class="fa-solid fa-puzzle-piece"></i></span> Integrations</a>
-                    <a href="#"><span><i class="fa-solid fa-sitemap"></i></span> Templates</a>
+                    <a href="./integrations page/integrations.html"><span><i class="fa-solid fa-puzzle-piece"></i></span> Integrations</a>
+                    <a href="./templates page/Templates.html"><span><i class="fa-solid fa-sitemap"></i></span> Templates</a>
                     <a href="#"><span><i class="fa-solid fa-meteor"></i></span> Getting Started</a>
-                    <a href="#"><span><i class="fa-regular fa-life-ring"></i></span> Help Center</a>
-                    <a href="#"><span><i class="fa-solid fa-question"></i></span> Productivity Methods + Quiz</a>
-                    <a href="#"><span><i class="fa-regular fa-lightbulb"></i></span> Inspiration Hub</a>
-                    <a href="#"><span><i class="fa-solid fa-download"></i></span> Downloads</a>
+                    <a href="./CW project/helpcenter.html"><span><i class="fa-regular fa-life-ring"></i></span> Help Center</a>
+                    <a href="./CW_project_saurabh_kumar_fs40_3700001/productivity-methods.html"><span><i class="fa-solid fa-question"></i></span> Productivity Methods + Quiz</a>
+                    <a href="./CW inspiration/inspiration.html"><span><i class="fa-regular fa-lightbulb"></i></span> Inspiration Hub</a>
+                    <a href="./CW_project_saurabh_kumar_fs40_3700001/downloads.html"><span><i class="fa-solid fa-download"></i></span> Downloads</a>
                 </div>
             </div>
             
-            <a href="#">Pricing</a>
-            <a class="vl"></a>
-            <a href="#">Log in</a>
-            <button>Start for free</button>
+            <a href="./pricing.html">Pricing</a>
+            <div class="vl"></div>
+            <hr id="navhr">
+            <a href="./login.html">Log in</a>
+            <button id="signupfree"> <a href="./signup.html">Start for free</a></button>
         </div>
+       
     </nav>
     <section>
         <div id="section1">
@@ -52,7 +56,7 @@
                 <h1>Organize your <br> work and <br>life, finally.</h1>
                 <p>Simplify life for both you and your team with the <br> world’s #1 task manager and to-do list app.</p>
                 <p>374K+ ★★★★★ reviews from <span><i class="fa-brands fa-apple"></i></span> <span><i class="fa-brands fa-android"></i></span></p>
-                <button class="btn">Start for free</button>
+                <button class="btn" id="signupfree"><a href="./signup.html">Start for free</a></button>
             </div>
             <div id="sec2">
                 <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_1536/https%3A%2F%2Fwww.todoist.com%2Fstatic%2Fhome-teams%2Fintro%2Fwide%2Fheaderui.en.png" alt="">
@@ -79,17 +83,159 @@
             </div>
         </div>
     </section>
+    <section id="section3">
+        <div id="section3a">
+            <aside>
+                <div id="section3aa">
+                    <p id="para2">Clear your mind</p>
+                    <h1>Capture tasks at the speed <br> of thought</h1>
+                    <p>We’ve spent over a decade refining Todoist to be <br> an extension of your mind. Capture and organize <br> tasks instantly using easy-flowing, natural <br> language.</p>
+                </div>
+
+                <div id="section3ab">
+                    <p id="para2">Focus on what’s important</p>
+                    <h1>Stay organized and <br> focused</h1>
+                    <p>Achieve mental clarity by sorting tasks into Today, <br> Upcoming, or using custom filters. See only what <br> you need, when you need it.</p>
+                </div>
+
+                <div id="section3ab">
+                    <p id="para2">Plan with confidence</p>
+                    <h1>Simplify your planning</h1>
+                    <p>Make the most of your time. Schedule due dates, <br> visualize your week in calendar view, and set <br> recurring tasks with ease.</p>
+
+                </div>
+                
+                <div id="section3ab">
+                    
+                    <p id="para2">Organize your teamwork, too</p>
+                    <h1>A home for your team’s <br> tasks</h1>
+                    <p>Give your team a shared space to collaborate and <br>stay on top of it all – alongside but separate from <br> your personal tasks and projects.</p>
+                    <a href="#"><p>Learn more about teams                    <i class="fa-solid fa-chevron-right"></i></p></a>
+                </div>
+            </aside>
+
+            
+            <div id="section3d">
+                
+                <div class="task-card">
+                    <input type="text" class="task-title" value="Review website traffic" readonly>
+                    <div class="task-options">
+                        <button id="btn"><i class="fa-regular fa-calendar-days"></i> Due date</button>
+                        <button id="btn">👤 Assignee</button>
+                        <button id="btn">⚑ Priority</button>
+                        <button id="btn"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                    <div class="task-footer">
+                        <select class="task-dropdown">
+                            <option>Inbox</option>
+                            <option>Work</option>
+                            <option>Personal</option>
+                        </select>
+                        <button class="add-task-btn">Add task</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section3b">
+            <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_1536/https%3A%2F%2Fwww.todoist.com%2Fstatic%2Fhome%2Fvideo-section%2Fen%2Fposter-image.png" alt="">
+        </div>
+        <div id="section3c">
+            <div id="section3ca">
+                <h1>Kickstart your next project with Todoist Templates</h1>
+                <p>No need to create projects or setups from scratch when we have 50+ templates made for you.</p>
+            </div>
+            <div id="section3e">
+                <button>Work</button>
+                <button>Personal</button>
+                <button>Education</button>
+                <button>Management</button>
+                <button> Marketing & Sales</button>
+                <button>Customer Support</button>
+    
+            </div>
+        </div>
+        <div id="section3f">
+                <div>
+                    <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Fimages.ctfassets.net%2Fdm4oa8qtogq0%2F1la3hgXN3C6hvQI6IulAKV%2F14b9e9e3675dea1a0d8b3e0c82559a52%2Faccounting-tasks.png%3Fw%3D256" alt="">
+                    <h1>Accounting Tasks</h1>
+                    <p>Create a system to keeps your books, receipts, and invoices organized.</p>
+                    <p><span><i class="fa-regular fa-file-lines"></i></span> List</p>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Fimages.ctfassets.net%2Fdm4oa8qtogq0%2F15OVPgnxNOQKhBmfbiju8D%2F6237caafe7e2eb3efd98658e6eebccc5%2Fbusiness-travel-packing.png%3Fw%3D256" alt="">
+                    <h1>Business Travel Packing</h1>
+                    <p>Never forget your laptop charger, lucky shoes, or passport again.</p>
+                    <p><span><i class="fa-regular fa-file-lines"></i></span> List</p>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Fimages.ctfassets.net%2Fdm4oa8qtogq0%2F4jRfVdAdXfu3MfxWkN4Mct%2Fd10e07e3fb8476bc0eb932daa3629d0b%2Fclient-management-light.png%3Fw%3D256" alt="">
+                    <h1>Client Management</h1>
+                    <p>Organize your work with clients from the smallest to largest details.</p>
+                    <p><span><i class="fa-regular fa-file-lines"></i></span> List</p>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Fimages.ctfassets.net%2Fdm4oa8qtogq0%2F1BRIRjqHOIp5yftZ1FIskk%2Fc1100be22568f4ed2a927266712ebdd1%2Fdeep-work.png%3Fw%3D256" alt="">
+                    <h1>Deep Work</h1>
+                    <p>Practice prioritizing focus and eliminating distraction with this template.</p>
+                    <p><span><i class="fa-regular fa-file-lines"></i></span> List</p>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Fimages.ctfassets.net%2Fdm4oa8qtogq0%2F6TiTWjSetzQYlfaCmDNDLc%2F9a3e60cc7022ba15b34042e669c52055%2Fmeeting-agenda.png%3Fw%3D256" alt="">
+                    <h1>Meeting Agenda</h1>
+                    <p>Waste less time in meetings, ensuring they're efficient and action-oriented.</p>
+                    <p><span><i class="fa-regular fa-file-lines"></i></span> List</p>
+                </div>
+        </div>
+        <div id="SeeAll"><a href="https://www.todoist.com/templates/category/work">See all  <span><i class="fa-solid fa-chevron-right"></i></span></a></div>
+       
+    </section>
+    <section id="section3g">
+            <aside>
+                <div id="section3aa">
+                    <p id="para2">In it for the long haul</p>
+                    <h1>A task manager you can <br>trust for life</h1>
+                    <p>We’ve been building Todoist for 18 years and 11 <br> days. Rest assured that we’ll never sell out to the <br> highest bidder.</p>
+                    <a href=""><span><i class="fa-solid fa-book-open"></i> </span> Read about our long-term mission</a>
+                </div>
+            </aside>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Fwww.todoist.com%2Fstatic%2Fhome-teams%2Fstats%2Fstat-box-2.png" alt="">
+                    <h3>2+ millions</h3>
+                    <p>tasks completed</p>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Fwww.todoist.com%2Fstatic%2Fhome-teams%2Fstats%2Fstat-box-3.png" alt="">
+                    <h3>160+ countries</h3>
+                    <p>worldwide</p>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Fwww.todoist.com%2Fstatic%2Fhome-teams%2Fstats%2Fstat-box-4.png" alt="">
+                    <h3>1+ million</h3>
+                    <p>Pro Users</p>
+                </div>
+              
+                <div>
+                    <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Fwww.todoist.com%2Fstatic%2Fhome-teams%2Fstats%2Fstat-box-1.png" alt="">
+                    <h3>30+ million
+
+                        </h3>
+                    <p>app downloads</p>
+                </div>
+            </div>
+    </section>
 
     <footer id="footer">
         <div id="foot">
             <h1>Gain calmness and clarity with the <br> world’s most beloved productivity app</h1>
             <p>374000+ ★★★★★ reviews on Google Play and App Store</p>
-            <button class="btn">Start for free</button>
-            <p> <a id="button"><span><i class="fa-solid fa-download"></i></span> download apps</a></p>
+            <a href="./signup.html"><button class="btn">Start for free</button></a>
+            <p> <a id="button" href="./CW_project_saurabh_kumar_fs40_3700001/downloads.html"><span><i class="fa-solid fa-download"></i></span> download apps</a></p>
+        
         </div>
       
         <hr>
-         <div id="footer1">
+        <div id="footer1">
             <div id="foot1a">
                 <div id="footer-icon">
                     <img src="photo/Screenshot 2025-02-05 004353.png" alt="icon">
@@ -101,38 +247,53 @@
                 <div id="footer1a">
                     <h3>Features</h3>
                     <a href="">How It Works</a>
-                    <a href="">For Teams</a>
-                    <a href="">Pricing</a>
-                    <a href="">Templates</a>
+                    <a href="./For Teams.html">For Teams</a>
+                    <a href="./pricing.html">Pricing</a>
+                    <a href="./templates page/Templates.html">Templates</a>
                 </div>
                 <div id="footer1a">
                     <h3>Resources</h3>
-                    <a href="">Download Apps</a>
-                    <a href="">Help Center</a>
-                    <a href="">Productivity Methods</a>
-                    <a href="">Integrations</a>
-                    <a href="">Channel Partners</a>
-                    <a href="">Developer API</a>
-                    <a href="">Status</a>
+                    <a href="./CW_project_saurabh_kumar_fs40_3700001/downloads.html">Download Apps</a>
+                    <a href="./CW project/helpcenter.html">Help Center</a>
+                    <a href="./CW_project_saurabh_kumar_fs40_3700001/productivity-methods.html">Productivity Methods</a>
+                    <a href="./integrations page/integrations.html">Integrations</a>
+                    <a href="#">Channel Partners</a>
+                    <a href="#">Developer API</a>
+                    <a href="#">Status</a>
                 </div>
                 <div id="footer1a">
                     <h3>Company</h3>
                     <a href="">About Us</a>
                     <a href="">Careers</a>
-                    <a href="">Inspiration Hub</a>
+                    <a href="./CW inspiration/inspiration.html">Inspiration Hub</a>
                     <a href="">Press</a>
                     <a href="">Twits</a>
                 </div>
                 <div id="footer1a">
-                    <a href=""><i class="fa-brands fa-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-youtube"></i></a>
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/todoist"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCQ_61yRKscCnkIJBPoR15EA"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/Todoist/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/todoistofficial"><i class="fa-brands fa-instagram"></i></a>
                 </div>
-             </div>
             </div>
-           
-
+        </div>
+       <div id="footer2">
+        <div id="footer2a">
+            <a href="https://www.todoist.com/security">Security |</a>
+            <a href="https://doist.com/privacy">Privacy |</a>
+            <a href="https://doist.com/terms-of-service"> Terms</a>
+            <a>© Doist Inc.</a>
+        </div>
+        <div class="language-dropdown">
+            <span class="globe-icon"><i class="fa-solid fa-globe"></i></span>
+            <select>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+            </select>
+        </div>
+       </div>
     </footer>
 </body>
 </html>

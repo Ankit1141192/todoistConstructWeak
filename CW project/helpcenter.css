@@ -1,0 +1,514 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+.testimonial {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 40px);
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.testimonial p {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: medium;
+}
+
+.testimonial .name {
+    font-weight: bold;
+    text-align: left;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 60px;
+    cursor: pointer;
+}
+
+.header .logo {
+    font-family: 'Verdana', sans-serif;
+    font-size: 20px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.header .login {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.header .login a {
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.header .login select {
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.help-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.help-link:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin-top: 100px;
+}
+
+.content {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 29px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+    border-radius: 25px;
+}
+
+.search-bar input {
+    width: 400px;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: #eee;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    margin: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-bottom: 120px;
+}
+
+.category img {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.category p {
+    margin: 0;
+    font-size: 20px; 
+}
+
+.category hr {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.pink {
+    background-color: #ffe6e6;
+    cursor: pointer;
+}
+
+.no-underline {
+    text-decoration: none;
+    color: #333;
+}
+
+.not-underline {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.yellow {
+    background-color: #fff7e6;
+    cursor: pointer;
+}
+
+.green {
+    background-color: #e6ffe6;
+    cursor: pointer;
+}
+
+.blue {
+    background-color: #e6f7ff;
+    cursor: pointer;
+}
+
+.sections-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.section {
+    padding: 20px;
+    font-size: 0.8em;
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.section img {
+    width: 200px; 
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.section p {
+    font-size: 15px;
+    color: #666;
+}
+
+.section a:hover {
+    color: #007bff;
+    text-decoration: none;
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contact {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+}
+
+.contact h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.contact p {
+    font-size: 20px;
+    color: #666;
+}
+
+.contact button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 2px 4px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.container {
+    width: 1000px; 
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header-content {
+    margin-bottom: 100px;
+}
+
+.header-content h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.header-content p {
+    font-size: 20px;
+    color: #666;
+}
+
+.header-content button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 8px 16px; 
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px; 
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+    font-size: 15px; 
+}
+
+.card-content p {
+    color: #666;
+    font-size: 15px; 
+}
+
+.card-content .tag {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #666;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px; 
+    margin-top: 10px;
+}
+
+.tag {
+    text-decoration: none;
+}
+
+.tag:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* .footer {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    color: #333;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-column img {
+    width: 180px; 
+    background-color: white;
+}
+
+.footer-column h3 {
+    font-size: 15px; 
+    margin-bottom: 8px; 
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 6px; 
+}
+
+.footer-column ul li a {
+    color: #333;
+    font-size: 15px; 
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: none;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding-top: 15px; 
+}
+
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px; 
+    font-size: 15px;
+}
+
+.footer-left ul li a {
+    color: #333;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.footer-left ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-left p {
+    margin-top: 10px;
+    font-size: 15px; 
+}
+ */
+/* footer start */
+#footer{
+    padding: 50px;
+    background-color: #f5f5f5;
+}
+#foot{
+   text-align: center;
+}
+#foot>h1{
+    font-size: 50px;
+}
+#foot>p{
+    color: #706d6b;
+}
+#footer-icon{
+    display: flex;
+    margin-left: 7%;
+
+}
+#footer-icon>img{
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+#footer-icon>h1{
+    color: black;
+}
+#footer1{
+    display: flex;
+    padding: 30px;
+    justify-content:space-between;
+}
+#footer1a>a{
+    display: block;
+    margin-top: 30px;
+}
+#footer1>div a{
+    text-decoration: none;
+}
+#foot-right{
+    display: flex;
+}
+#foot-right>div{
+    margin-right: 80px;
+}
+#foot-right>div a{
+    color: #26231f;
+}
+#foot1a{
+    margin-left: 10px;
+}
+a>i{
+    font-size: 30px;
+}
+#footer2a>a{
+    color: #706d6b;
+}
+#footer2{
+    display: flex;
+    justify-content: space-between;
+}
+#footer2a>a:hover{
+    text-decoration: underline;
+}
