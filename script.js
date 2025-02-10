@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const eyeIcon = document.getElementById("invisible");
     const loginButton = document.getElementById("Login-btn");
 
+    // Toggle Password Visibility
     if (eyeIcon && passwordInput) {
         eyeIcon.addEventListener("click", () => {
             const isPasswordHidden = passwordInput.type === "password";
@@ -14,27 +15,30 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Signup & Login Logic
     if (loginButton && emailInput && passwordInput) {
-        if (window.location.pathname.includes("signup.html")) {
-            // Signup Logic
-            loginButton.addEventListener("click", () => {
-                const email = emailInput.value.trim();
-                const password = passwordInput.value.trim();
+        loginButton.addEventListener("click", () => {
+            const email = emailInput.value.trim();
+            const password = passwordInput.value.trim();
 
-                if (email && password) {
+            if (!email || !password) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            if (window.location.pathname.includes("signup")) {
+                try {
                     localStorage.setItem(email, password);
+                    console.log("Stored Data:", localStorage.getItem(email)); // Debugging
                     alert("Signup successful! Redirecting to login...");
                     window.location.href = "login.html";
-                } else {
-                    alert("Please fill in all fields.");
+                } catch (error) {
+                    console.error("Error saving to localStorage:", error);
+                    alert("Signup failed. Please try again.");
                 }
-            });
-        } else if (window.location.pathname.includes("login.html")) {
-            // Login Logic
-            loginButton.addEventListener("click", () => {
-                const email = emailInput.value.trim();
-                const password = passwordInput.value.trim();
+            } else if (window.location.pathname.includes("login")) {
                 const storedPassword = localStorage.getItem(email);
+                console.log("Retrieved Password:", storedPassword); // Debugging
 
                 if (storedPassword && storedPassword === password) {
                     alert("Login successful! Redirecting to homepage...");
@@ -42,61 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 } else {
                     alert("Invalid email or password! Redirecting to signup...");
                     window.location.href = "signup.html";
-                }
-            });
-        }
-    }
-});
-document.addEventListener("DOMContentLoaded", () => {
-    const menuIcon = document.querySelector(".menu-icon");
-    const navRight = document.getElementById("nav-right");
-
-    // ✅ Toggle Navbar on Click
-    function toggleMenu() {
-        var navRight = document.querySelector("nav-right");
-        navRight.classList.toggle("active");
-    }
-    menuIcon.addEventListener("click", () => {
-        if (navRight.classList.contains("show")) {
-            navRight.classList.remove("show");  // Hide menu
-        } else {
-            navRight.classList.add("show");  // Show menu
-        }
-    });
-
-    // ✅ Hide Navbar When Clicking Outside (Optional)
-    document.addEventListener("click", (event) => {
-        if (!menuIcon.contains(event.target) && !navRight.contains(event.target)) {
-            navRight.classList.remove("show");  // Close menu if clicked outside
-        }
-    });
-});
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const section = document.querySelector("#section3g");
-    if (section) {
-        section.addEventListener("mouseenter", function () {
-            let container = section.querySelector("div");
-            if (container) {
-                let images = container.children;
-                if (images.length > 1) {
-                    setTimeout(() => {
-                        let first = images[0];
-                        let second = images[1];
-
-                        first.style.display = "none";
-                        second.style.display = "none";
-
-                        // Clone and append images back
-                        container.appendChild(first.cloneNode(true));
-                        container.appendChild(second.cloneNode(true));
-
-                        // Remove the original images
-                        container.removeChild(first);
-                        container.removeChild(second);
-                    }, 3000); // Delay for animation
                 }
             }
         });

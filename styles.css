@@ -121,10 +121,10 @@ body{
 #nav-right > button:hover {
     background-color: #c72e21;
 }
-a:hover{
+/* a:hover{
     background-color: #dedbd8;
     border-radius: 10px;
-}
+} */
 h1>a{
     background-color: none;
     color:  #e34432;
@@ -435,6 +435,12 @@ a{
     flex: 0 0 35%;
     transition: transform 0.2s ease-in-out;
     transition:  transform 0.8 ease-in-out;
+}
+h1>#logo{
+    background-color: none;
+}
+h1>#logo:hover{
+    background-color: none;
 }
 
 #section3g img {
