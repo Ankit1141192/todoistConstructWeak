@@ -45,3 +45,19 @@ https://bright-cendol-1e0307.netlify.app
 
 # signup page
 ![Screenshot (860)](https://github.com/user-attachments/assets/32ccbeec-bcfc-47dc-9abc-4047911f0619)
+
+# pricing
+![Screenshot (862)](https://github.com/user-attachments/assets/2798ddfe-71f3-4432-9a42-c6868ebfee29)
+
+## Resources
+# Intregation
+![Screenshot (866)](https://github.com/user-attachments/assets/4404d126-f7a1-4496-9d64-04af9d6e8154)
+
+# Templates
+![Screenshot (865)](https://github.com/user-attachments/assets/63d21845-64ed-4458-95fe-a068d585454a)
+
+# Help centre
+![Screenshot (863)](https://github.com/user-attachments/assets/4fb3a6ff-bf7a-42c0-80a0-caf20844de21)
+
+# DownLoads App
+![Screenshot (867)](https://github.com/user-attachments/assets/b615a268-c36a-4aca-b764-81a37f847ffd)
